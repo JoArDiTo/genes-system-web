@@ -6,6 +6,7 @@ export interface TestPerformedSelected {
   templateTest: TemplateTest
   interpretation: string
   answers: Answer[]
+  user: User
 }
 
 interface TemplateTest {
@@ -18,4 +19,11 @@ interface Answer {
   question: string
   alternative: string
   value: number
+}
+
+interface User {
+  firstname: string
+  lastname: string
+  age: number
+  gender: string
 }

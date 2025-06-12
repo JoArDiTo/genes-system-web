@@ -9,7 +9,7 @@ import { ProfilePage } from './pages/Profile';
 import ProtectedRoute from './components/ProtectedRoute';
 import { TestSelectorPage } from './pages/TestSelector';
 import { TestSelectedPage } from './pages/TestSelected';
-import { ResultSelectedPage } from './sections/home/ResultSelected';
+import { ResultSelectedPage } from './pages/ResultSelected';
 import { ResultSelectorPage } from './pages/ResultSelector';
 import { StudentSelector } from './pages/StudentSelector';
 import { StudentSelected } from './pages/StudentSelected';

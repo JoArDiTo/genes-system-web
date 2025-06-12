@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { UserRole } from "../../lib/enum";
 
-export interface Props {
+interface Props {
   setCurrentSection: (section: 'answers' | 'observations' | 'ai') => void;
   currentSection: 'answers' | 'observations' | 'ai';
 }
@@ -33,7 +33,7 @@ export const ChangeSection = ({ setCurrentSection, currentSection }: Props) => {
           onClick={() => setCurrentSection('ai')}
           className={`py-2 px-4 font-medium ${currentSection === 'ai' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
         >
-         Ayuda con la IA
+         Consultar a la IA
         </button>
       )}
     </nav>
