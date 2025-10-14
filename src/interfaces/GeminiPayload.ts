@@ -1,5 +1,6 @@
 export interface GeminiPayload {
     templateTestName: string;
+    templateTestDescription: string;
     studentName: string;
     studentGender: string;
     studentAge: number;

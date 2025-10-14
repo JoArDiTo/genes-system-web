@@ -27,6 +27,7 @@ export const GeminiInteractionSection = ({ resultData, geminiResult, setGeminiRe
     try {
       const payload: GeminiPayload = {
         templateTestName: resultData.templateTest.name,
+        templateTestDescription: resultData.templateTest.description,
         studentName: `${resultData.user.firstname} ${resultData.user.lastname}`,
         studentGender: resultData.user.gender,
         studentAge: resultData.user.age,
