@@ -1,20 +1,19 @@
-import { cookieStore } from 'cookie-store';
-
 export async function setToken(token: string) {
-  await cookieStore.set({
-    name: 'token',
-    value: token,
-    path: '/',
-    secure: true,
-    expires: new Date(Date.now() + 60 * 60 * 1000)
-  })
+  const expires = new Date(Date.now() + 60 * 60 * 1000).toUTCString();
+
+  document.cookie = `token=${token}; path=/; expires=${expires}; secure; SameSite=None`;
 }
 
 export async function getToken() {
-  const token = await cookieStore.get('token')
-  return token?.value ?? null
+  const cookies = document.cookie.split('; ');
+
+  const tokenCookie = cookies.find((cookie) => cookie.startsWith('token='));
+
+  if (!tokenCookie) return null;
+
+  return tokenCookie.split('=')[1];
 }
 
 export async function removeToken() {
-  await cookieStore.delete('token')
+  document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; secure; SameSite=None';
 }
