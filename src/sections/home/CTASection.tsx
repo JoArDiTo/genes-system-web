@@ -9,11 +9,17 @@ export const CtaSection = () => {
   const { user } = authContext
   
   return (
-    <section id="cta"  className="py-16 bg-gradient-to-r from-blue-700 to-blue-600 text-white">
+    <section id="cta" className="py-16 bg-secondary text-white relative overflow-hidden">
+      {/* Detalle decorativo inferior en dorado */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-primary"></div>
+
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-6">Comienza a utilizar nuestro sistema hoy</h2>
-        <p className="text-xl mb-8 max-w-3xl mx-auto">
-          Únete a nuestra comunidad comprometida con el bienestar emocional y mental de nuestros estudiantes.
+        <h2 className="text-3xl font-bold mb-6 font-serif">
+          Comienza a utilizar nuestro sistema hoy
+        </h2>
+        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+          Únete a la comunidad del Colegio San Roque comprometida con el desarrollo integral, 
+          la autonomía y el bienestar socioemocional de nuestros estudiantes.
         </p>
         
         {
@@ -21,7 +27,7 @@ export const CtaSection = () => {
             user.role === UserRole.STUDENT && (
               <a 
                 href="/cuestionarios" 
-                className="bg-white hover:bg-gray-100 text-blue-700 px-8 py-3 rounded-lg font-medium transition-colors"
+                className="bg-primary hover:bg-primary-hover text-secondary px-8 py-3 rounded-lg font-bold transition-colors inline-block shadow-md"
               >
                 Realizar Test
               </a>
@@ -29,9 +35,9 @@ export const CtaSection = () => {
           ) : (
             <a 
               href="/iniciar-sesion" 
-              className="bg-white hover:bg-gray-100 text-blue-700 px-8 py-3 rounded-lg font-medium transition-colors"
+              className="bg-primary hover:bg-primary-hover text-secondary px-8 py-3 rounded-lg font-bold transition-colors inline-block shadow-md"
             >
-              Iniciar Sesion
+              Iniciar Sesión
             </a>
           )
         }
