@@ -30,7 +30,7 @@ export const LoginPage = () => {
     <>
       <section className="flex flex-col items-center justify-center min-h-screen py-5 px-3 bg-[url('/images/login-found.webp')] bg-cover bg-center">
         <form className="bg-white/80 w-full max-w-md flex flex-col gap-4 border-2 border-gray-300 rounded-md py-20 px-4" onSubmit={handleSubmit}>
-          <img className="w-2/3 object-contain mx-auto pb-8" src="https://colegiogenes.edu.pe/wp-content/uploads/2020/10/logo.svg" alt="Logo de la institución educativa GENES" />
+          <img className="w-2/3 object-contain mx-auto pb-8" src="https://www.sanroque.edu.pe/wp-content/uploads/2023/04/logo1.png" alt="Logo de la institución educativa SAN Roque" />
             <input 
               id="email"
               type="email"
