@@ -95,7 +95,7 @@ export const GeminiInteractionSection = ({ resultData, geminiResult, setGeminiRe
     <section className="flex flex-col xl:flex-row items-start justify-between gap-8 p-6">
       <div className="w-full xl:max-w-xl space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-[#3A1F0B] mb-2 flex items-center gap-2">
         <AiIcon />
         Consulta con Gemini AI
         </h2>
@@ -118,7 +118,7 @@ export const GeminiInteractionSection = ({ resultData, geminiResult, setGeminiRe
         <button
           disabled={loadingObservation}
           type="submit"
-          className='w-full flex items-center justify-center gap-2 mt-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-blue-700 cursor-pointer transition disabled:bg-gray-400 disabled:cursor-not-allowed'
+          className='w-full flex items-center justify-center gap-2 mt-1 bg-[#F5A623] text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-[#D98C00] text-[#3A1F0B] cursor-pointer transition disabled:bg-gray-400 disabled:cursor-not-allowed'
         >
           {loadingObservation && (
           <LoadingIcon />
@@ -129,14 +129,14 @@ export const GeminiInteractionSection = ({ resultData, geminiResult, setGeminiRe
           type="button"
           disabled={loadingValidation}
           onClick={handleValidateObservation}
-          className='w-full flex items-center justify-center gap-2 mt-1 bg-green-600 text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-green-700 cursor-pointer transition disabled:bg-gray-400 disabled:cursor-not-allowed'
+          className='w-full flex items-center justify-center gap-2 mt-1 bg-[#E63946] text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-[#C82333] text-white cursor-pointer transition disabled:bg-gray-400 disabled:cursor-not-allowed'
         >
           {loadingValidation ? 'Validando...' : 'Validar análisis'}
         </button>
         </form>
         {geminiValidationContent && (
-          <div className="mt-4 bg-white rounded-lg p-4 border border-green-100 shadow-sm">
-            <h3 className="font-semibold text-green-600 mb-2 flex items-center gap-1">
+          <div className="mt-4 bg-white rounded-lg p-4 border border-[#F6D28B] shadow-sm">
+            <h3 className="font-semibold text-[#B7791F] mb-2 flex items-center gap-1">
               <AiIcon />
               Validación de Gemini
             </h3>
@@ -146,15 +146,15 @@ export const GeminiInteractionSection = ({ resultData, geminiResult, setGeminiRe
       </div>
       </div>
       <div className="flex-1 w-full xl:pl-8 mt-8 xl:mt-0">
-      <div className="bg-blue-50 rounded-xl p-5 shadow-inner">
-        <h2 className="text-xl font-bold text-blue-700 mb-3 flex items-center gap-2">
+      <div className="bg-[#FFF7E8] border border-[#F6D28B] rounded-xl p-5 shadow-inner">
+        <h2 className="text-xl font-bold text-[#3A1F0B] mb-3 flex items-center gap-2">
         <AiIcon />
         Generar idea del test tomado
         </h2>
         <button
         disabled={loadingGeminiResponse}
         onClick={handleAskGemini}
-         className='w-full flex items-center justify-center gap-2 mt-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-blue-700 cursor-pointer transition disabled:bg-gray-400 disabled:cursor-not-allowed'
+         className='w-full flex items-center justify-center gap-2 mt-1 bg-[#F5A623] text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-[#D98C00] text-[#3A1F0B] cursor-pointer transition disabled:bg-gray-400 disabled:cursor-not-allowed'
         >
         {loadingGeminiResponse ? (
           <>
@@ -166,8 +166,8 @@ export const GeminiInteractionSection = ({ resultData, geminiResult, setGeminiRe
         
         </button>
         {geminiResult && (
-        <div className="mt-6 bg-white rounded-lg p-4 border border-blue-100 shadow-sm">
-          <h3 className="font-semibold text-blue-600 mb-2 flex items-center gap-1">
+        <div className="mt-6 bg-white rounded-lg p-4 border border-[#F6D28B] shadow-sm">
+          <h3 className="font-semibold text-[#B7791F] mb-2 flex items-center gap-1">
           <AiIcon />
           Observaciones de Gemini
           </h3>

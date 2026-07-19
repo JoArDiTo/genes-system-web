@@ -17,13 +17,13 @@ export const ChangeSection = ({ setCurrentSection, currentSection }: Props) => {
     <nav className="mb-4">
       <button
         onClick={() => setCurrentSection('answers')}
-        className={`py-2 px-4 font-medium ${currentSection === 'answers' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
+        className={`py-2 px-4 font-medium ${currentSection === 'answers' ? 'border-b-2 border-[#F5A623] text-[#3A1F0B]' : 'text-gray-600 hover:text-[#B7791F]'}`}
       >
         Resultados
       </button>
       <button
         onClick={() => setCurrentSection('observations')}
-        className={`py-2 px-4 font-medium ${currentSection === 'observations' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
+        className={`py-2 px-4 font-medium ${currentSection === 'observations' ? 'border-b-2 border-[#F5A623] text-[#3A1F0B]' : 'text-gray-600 hover:text-[#B7791F]'}`}
       >
         Observaciones
       </button>
@@ -31,7 +31,7 @@ export const ChangeSection = ({ setCurrentSection, currentSection }: Props) => {
         
         <button
           onClick={() => setCurrentSection('ai')}
-          className={`py-2 px-4 font-medium ${currentSection === 'ai' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
+          className={`py-2 px-4 font-medium ${currentSection === 'ai' ? 'border-b-2 border-[#F5A623] text-[#3A1F0B]' : 'text-gray-600 hover:text-[#B7791F]'}`}
         >
          Consultar a la IA
         </button>
